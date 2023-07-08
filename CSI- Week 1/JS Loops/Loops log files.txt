@@ -1,0 +1,57 @@
+var dhoni = {"name":'MS', "age":42, 6:200,4:500,50:51,100:10};
+undefined
+dhoni.name;
+'MS'
+dhoni.50;
+VM2661:1 Uncaught SyntaxError: Unexpected number
+dhoni[50]
+51
+dhoni.number of wins=100;
+VM2775:1 Uncaught SyntaxError: Unexpected identifier 'of'
+dhoni.["number of wins"]=100;
+VM2783:1 Uncaught SyntaxError: Unexpected token '['
+dhoni["number of wins"]=100;
+100
+dhoni;
+{4: 500, 6: 200, 50: 51, 100: 10, name: 'MS', age: 42, number of wins: 100}
+dhoni['number of wins'];
+100
+var key = 'age';
+undefined
+dhoni.key;
+undefined
+dhoni[key];
+42
+for(var key in dhoni){
+    console.log(key);
+}
+VM3076:2 4
+VM3076:2 6
+VM3076:2 50
+VM3076:2 100
+VM3076:2 name
+VM3076:2 age
+VM3076:2 number of wins
+undefined
+for(var key in dhoni){
+    console.log(key, dhoni[key]);
+}
+VM3125:2 4 500
+VM3125:2 6 200
+VM3125:2 50 51
+VM3125:2 100 10
+VM3125:2 name MS
+VM3125:2 age 42
+VM3125:2 number of wins 100
+undefined
+var arr = [10,20,30,40,50];
+undefined
+for(var element of arr){
+    console.log(element);
+}
+VM3331:2 10
+VM3331:2 20
+VM3331:2 30
+VM3331:2 40
+VM3331:2 50
+undefined
