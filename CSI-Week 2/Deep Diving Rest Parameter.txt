@@ -1,0 +1,110 @@
+function add(){
+   // console.log("I am the Add ", arguments.length);
+    var sum = 0;
+    for(var i = 0; i<arguments.length; i++){
+    sum = sum + arguments[i];
+}
+    return sum;
+}
+undefined
+typeof add;
+'function'
+add();
+0
+add(1,2);
+3
+add(1,2,3,4,5);
+15
+add(1,2,3,"4",5);
+'645'
+function add(){
+   // console.log("I am the Add ", arguments.length);
+    var sum = 0;
+    for(var i = 0; i<arguments.length; i++){
+    sum = sum + parseInt(arguments[i]);
+}
+    return sum;
+}
+undefined
+add(1,2,3,"4",5);
+15
+add(1,2,"ram","4",5);
+NaN
+parseInt("ram");
+NaN
+NaN + 10
+NaN
+NaN == NaN;
+false
+function add(){
+   // console.log("I am the Add ", arguments.length);
+    var sum = 0;
+    for(var i = 0; i<arguments.length; i++){
+    sum = sum + (isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]));
+}
+    return sum;
+}
+undefined
+add(1,2,"ram","4",5);
+12
+function one(){
+    return 1;
+}
+undefined
+function two(){
+    return "2";
+}
+undefined
+add(1,"2",3,one, two, "ram");
+6
+function add(){
+   // console.log("I am the Add ", arguments.length);
+    var sum = 0;
+    for(var i = 0; i<arguments.length; i++){
+        if(typeof arguments[i] ==='function'){
+            arguments[i] =  arguments[i]();
+        }
+    sum = sum + (isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]));
+}
+    return sum;
+}
+undefined
+add(1,"2",3,one, two, "ram");
+9
+function add(){
+   // console.log("I am the Add ", arguments.length);
+    var sum = 0;
+    for(var i = 0; i<arguments.length; i++){
+        if(typeof arguments[i] ==='function'){
+            arguments[i] =  arguments[i]();
+        }
+    sum = sum + (isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]));
+}
+    return sum;
+}
+undefined
+function add(...arg){
+   // console.log("I am the Add ", arguments.length);
+    var sum = 0;
+    for(var i = 0; i<arg.length; i++){
+        if(typeof arg[i] ==='function'){
+            arg[i] =  arg[i]();
+        }
+    sum = sum + (isNaN(parseInt(arg[i]))?0:parseInt(arg[i]));
+}
+    return sum;
+}
+undefined
+add(1,"2",3,one, two, "ram");
+9
+function show(x,y=0,...z){
+    console.log(x, y , z);
+}
+undefined
+show(10,20,30,40,50);
+VM2565:2 10 20 (3) [30, 40, 50]0: 301: 402: 50length: 3[[Prototype]]: Array(0)
+undefined
+function show(x,y=0,...z){
+    console.log(x, y , z);
+}
+undefined
