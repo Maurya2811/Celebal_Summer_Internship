@@ -1,0 +1,83 @@
+var z = 100;
+undefined
+var d = new Number(100);
+undefined
+typeof d;
+'object'
+typeof z;
+'number'
+function show(...arg){
+var sum = 0;
+    for(let e of arg){
+        sum = sum + e;
+    }
+    return sum;
+}
+undefined
+show(10,20);
+30
+show();
+0
+show(1,2,3,4,5,6);
+21
+function show(){
+var sum = 0;
+    for(let i = 0; i<arguments.length; i++){
+        sum = sum + arguments[i];
+    }
+    return sum;
+}
+undefined
+show();
+0
+show(10,20):
+VM588:1 Uncaught SyntaxError: Unexpected token ':'
+show(10,20);
+30
+show;
+ƒ show(){
+var sum = 0;
+    for(let i = 0; i<arguments.length; i++){
+        sum = sum + arguments[i];
+    }
+    return sum;
+}
+typeof show;
+'function'
+console.dir(show);
+VM761:1 ƒ show()arguments: nullcaller: nulllength: 0name: "show"prototype: {constructor: ƒ}[[FunctionLocation]]: VM525:1[[Prototype]]: ƒ ()[[Scopes]]: Scopes[1]
+undefined
+var arr = [];
+undefined
+var w = {id:1001};
+undefined
+arr.length;
+0
+w.length;
+undefined
+arr.length;
+0
+w.length;
+undefined
+function add(){
+    console.log('I am a Named Function ');
+}
+undefined
+add();
+VM1067:2 I am a Named Function 
+undefined
+var x = 10;
+var adder = function(){}; // Anonymous Fn / Function Expression
+undefined
+typeof adder;
+'function'
+adder();
+undefined
+adder;
+ƒ (){}
+add();
+VM1067:2 I am a Named Function 
+undefined
+window.add(); 
+VM1067:2 I am a Named Function 
+undefined
